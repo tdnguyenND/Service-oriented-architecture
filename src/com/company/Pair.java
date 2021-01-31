@@ -1,9 +1,8 @@
 package com.company;
 
-import java.rmi.Remote;
-import java.rmi.RemoteException;
+import java.io.Serializable;
 
-public interface Pair extends Remote {
-    int getSum(int[] arr) throws RemoteException;
-    int getMul(int[] arr) throws RemoteException;
+public interface Pair extends Serializable {
+    int getSum(int[] arr);
+    int getMul(int[] arr);
 }

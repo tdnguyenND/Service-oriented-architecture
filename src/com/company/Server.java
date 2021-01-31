@@ -8,7 +8,7 @@ import java.rmi.registry.LocateRegistry;
 public class Server {
     public static void main(String[] args) throws RemoteException, MalformedURLException {
         LocateRegistry.createRegistry(Constant.port);
-        Pair skeleton = new PairRemote();
+        App skeleton = new AppImpl();
         Naming.rebind(Constant.pairRemoteFullPath, skeleton);
     }
 }

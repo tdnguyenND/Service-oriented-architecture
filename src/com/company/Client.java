@@ -7,8 +7,9 @@ import java.rmi.RemoteException;
 
 public class Client {
     public static void main(String[] args) throws RemoteException, NotBoundException, MalformedURLException {
-        Pair stub=(Pair) Naming.lookup(Constant.pairRemoteFullPath);
-        System.out.println(stub.getMul(new int[]{3, 2, 3}));
-        System.out.println(stub.getSum(new int[]{0, 2, 3}));
+        App stub=(App) Naming.lookup(Constant.pairRemoteFullPath);
+        Pair pair = stub.getSumMul();
+        System.out.println(pair.getMul(new int[]{3, 2, 3}));
+        System.out.println(pair.getSum(new int[]{0, 2, 3}));
     }
 }

@@ -1,13 +1,6 @@
 package com.company;
 
-import java.rmi.RemoteException;
-import java.rmi.server.UnicastRemoteObject;
-
-public class PairRemote extends UnicastRemoteObject implements Pair {
-    protected PairRemote() throws RemoteException {
-        super();
-    }
-
+public class PairImpl implements Pair {
     @Override
     public int getSum(int[] arr) {
         int sum = 0;
